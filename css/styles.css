@@ -81,6 +81,8 @@ p, h1, h2, h3, h4, h5, h6 {
       font-family: monospace;
       align-self: center;
       justify-self: center;
+      padding: 10px;
+      font-size: 1.6rem;
     }
 
     .hero-description {
@@ -96,6 +98,13 @@ p, h1, h2, h3, h4, h5, h6 {
       height: 40px;
       align-self: center;
       justify-self: center;
+      background: white;
+      color: black;
+      border-radius: 12px;
+    }
+
+    .hero-btn:hover {
+      cursor: pointer;
     }
 
   /* BODY */
@@ -141,6 +150,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
     li {
       margin-bottom: 20px;
+      padding: 10px;
     }
 
     .review-container {
@@ -149,7 +159,7 @@ p, h1, h2, h3, h4, h5, h6 {
       grid-template-columns: auto;
       min-height: 100vh;
       padding-top: 25px;
-      background: conic-gradient(from 90deg, #988f92 0.000deg, #8f8c92 25.714deg, #858891 51.429deg, #7b8491 77.143deg, #727f90 102.857deg, #687b8e 128.571deg, #5e768d 154.286deg, #54708b 180.000deg, #4b6b89 205.714deg, #426586 231.429deg, #3a6083 257.143deg, #335a80 282.857deg, #2c547d 308.571deg, #264e79 334.286deg, #214875 360.000deg);;
+      background: black;
     }
 
     .reviews {
@@ -209,8 +219,98 @@ p, h1, h2, h3, h4, h5, h6 {
     }
   /* FOOTER */
 
+
   .footer-container {
     display: flex;
     flex-direction: column;
-    min-height: 25vh;
+    min-height: 20vh;
+    height: 20vh;
+    justify-content: center;
+    background-color: #111111;
+  }
+
+  .footer-btn {
+    align-self: center;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 0.75rem 1.5rem;
+    min-width: 200px;
+    min-height: 40px;
+    border-radius: 30px;
+  }
+
+  .footer-btn:hover {
+    cursor: pointer;
+  }
+
+  /* MEDIA QUERIES */ 
+
+  @media (min-width: 428px) {
+    .hero-title {
+      padding: 0;
+    }
+  }
+
+  @media (min-width: 462px) {
+    .hero-description {
+      padding: 10px;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .features {
+      gap: 50px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+
+    .features {
+      line-height: 3;
+    }
+
+    ul {
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    .product-1 {
+      min-width: 120px;
+      min-height: 120px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .hero-description {
+      font-size: 1.2rem;
+    }
+
+    .features {
+      line-height: 4;
+      gap: 0;
+    }
+
+  }
+
+  @media (min-width: 1920px) {
+    strong {
+      font-size: 1.4rem;
+    }
+
+    .features .feature-title {
+      font-size: 2rem;
+    }
+
+    .list-text {
+      font-size: 1.3rem;
+    }
+
+    .header-content .hero-title {
+      font-size: 1.8rem;
+    }
+
+    .hero-description {
+      font-size: 1.4rem;
+    }
   }
